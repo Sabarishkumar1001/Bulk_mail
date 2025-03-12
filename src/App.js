@@ -53,7 +53,7 @@ function App() {
 
     setStatus(true);
     axios
-      .post("http://localhost:5016/sendmail", { msg, email, emailList }) // Send single email and list
+      .post("https://bulk-mail-backend-pi.vercel.app/sendmail", { msg, email, emailList }) // Send single email and list
       .then((response) => {
         if (response.data.success) {
           alert("Emails sent successfully!");
